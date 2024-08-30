@@ -422,7 +422,7 @@ console.log("Esercizio 17 - Ricerco nel titolo stringa 'ring' =>", searchByTitle
 const searchAndDivide = (titleSearch, arrayOfMovies) => {
   const moviesObj = { match: [], unmatch: [] };
   for (let i = 0; i < arrayOfMovies.length; i++) {
-    if (arrayOfMovies[i].Title.includes(titleSearch)) {
+    if (arrayOfMovies[i].Title.includes(titleSearch) || arrayOfMovies[i].Title.toLowerCase().includes(titleSearch)) {
       moviesObj.match.push(arrayOfMovies[i]);
     } else {
       moviesObj.unmatch.push(arrayOfMovies[i]);
@@ -431,8 +431,11 @@ const searchAndDivide = (titleSearch, arrayOfMovies) => {
   return moviesObj;
 };
 
-console.log("Esercizio 18 - Divido in 2 array in base al risultato =>");
+console.log("Esercizio 18 - Divido in 2 array in base al risultato (stringa 'Ring') =>");
 console.log(searchAndDivide("Ring", movies));
+
+console.log("Esercizio 18 - Divido in 2 array in base al risultato (stringa 'lord') =>");
+console.log(searchAndDivide("lord", movies));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
