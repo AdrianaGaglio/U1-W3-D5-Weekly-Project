@@ -569,20 +569,6 @@ halfTree(5);
 
 */
 
-// const tree = (num) => {
-//   let text = "";
-//   let spaces = [];
-//   for (let i = num; i < num; i++) {
-//     spaces.push(" ");
-//   }
-//   for (let i = 0; i < num; i++) {
-//     text += spaces.join(" ") + "*";
-//     console.log(text);
-//   }
-// };
-
-// console.log("Esercizio 28", tree(5));
-
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
