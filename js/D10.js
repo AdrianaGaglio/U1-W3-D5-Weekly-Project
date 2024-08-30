@@ -420,18 +420,14 @@ console.log("Esercizio 17 - Ricerco nel titolo stringa 'ring' =>", searchByTitle
 */
 
 const searchAndDivide = (titleSearch, arrayOfMovies) => {
-  const match = [];
-  const unmatch = [];
+  const moviesObj = { match: [], unmatch: [] };
   for (let i = 0; i < arrayOfMovies.length; i++) {
     if (arrayOfMovies[i].Title.includes(titleSearch)) {
-      match.push(arrayOfMovies[i]);
+      moviesObj.match.push(arrayOfMovies[i]);
     } else {
-      unmatch.push(arrayOfMovies[i]);
+      moviesObj.unmatch.push(arrayOfMovies[i]);
     }
   }
-  const moviesObj = {};
-  moviesObj.match = match;
-  moviesObj.unmatch = unmatch;
   return moviesObj;
 };
 
